@@ -30,7 +30,7 @@ Show Admin
 
 # Project Builded
 
-JAVA - Object Orientated Programming - 
+JAVA - Object Orientated Programming
 
 Interface Design - Java Frame Form (J-Frame)
 
