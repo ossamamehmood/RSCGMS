@@ -9,16 +9,24 @@ This project is a part of Student Registration, Registration Process & Administr
 Student :
 
 Add New Student
+
 Update / Remove Student
+
 Search Student
+
 Show Student
+
 
 Admin :
 
 Add New Admin
+
 Update / Remove Admin
+
 Search Admin
+
 Show Admin
+
 
 # Project Builded
 
