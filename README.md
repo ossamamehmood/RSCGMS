@@ -6,7 +6,7 @@ This project is a part of Student Registration, Registration Process & Administr
 
 # Project Functionalities :
 
-Student Functionalities :
+# Student Functionalities :
 
 Add New Student
 
@@ -17,7 +17,7 @@ Search Student
 Show Student
 
 
-Admin Functionalities :
+# Admin Functionalities :
 
 Add New Admin
 
