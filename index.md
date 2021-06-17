@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+# Welcome To Registration and Student Card Generation Management System - 
 
-You can use the [editor on GitHub](https://github.com/ossamamehmood/RegistrationManagementSystem/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project is a part of Student Registration, Registration Process & Administrator with some great functionality where the following modules are performed (Semester Project). 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Project Functionalities :
 
-### Markdown
+# Student Functionalities :
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Add New Student
 
-```markdown
-Syntax highlighted code block
+Update / R emove Student
 
-# Header 1
-## Header 2
-### Header 3
+Search Student
 
-- Bulleted
-- List
+Show Student
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+# Admin Functionalities :
 
-[Link](url) and ![Image](src)
-```
+Add New Admin
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Update / Remove Admin
 
-### Jekyll Themes
+Search Admin
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ossamamehmood/RegistrationManagementSystem/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Show Admin
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# Project Builded
+
+JAVA - Object Orientated Programming
+
+Interface Design - Java Frame Form (J-Frame)
+
+Database Connectivity : SQL Java Connector - PHP My Admin - Xampp Control Panel
