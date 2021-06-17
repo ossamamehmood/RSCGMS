@@ -6,18 +6,18 @@ This project is a part of Student Registration, Registration Process & Administr
 
 # Project Functionalities :
 
-Student :
+Student Functionalities :
 
 Add New Student
 
-Update / Remove Student
+Update / R emove Student
 
 Search Student
 
 Show Student
 
 
-Admin :
+Admin Functionalities :
 
 Add New Admin
 
