@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2021 at 09:20 PM
+-- Generation Time: Jun 20, 2021 at 02:01 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -53,11 +53,20 @@ CREATE TABLE `student` (
   `id` int(12) NOT NULL,
   `StdName` varchar(50) NOT NULL,
   `stdFatherName` varchar(50) NOT NULL,
-  `StdBlood` varchar(5) NOT NULL,
+  `StdSession` varchar(50) NOT NULL,
   `StdPhone` varchar(20) NOT NULL,
-  `StdCity` varchar(50) NOT NULL,
-  `Class` int(11) NOT NULL
+  `StdBachelor` varchar(50) NOT NULL,
+  `Class` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `StdName`, `stdFatherName`, `StdSession`, `StdPhone`, `StdBachelor`, `Class`) VALUES
+(1, 'Ossama Mehmood', 'Abdul Jabbar', 'Spring Session', '03345463367', 'Software Engineering (Non Engineering)', 'BSE-3B'),
+(2, 'Hamza Altaf', 'Muhammad Altaf', 'Spring Session', '03348838455', 'Software Engineering (Non Engineering)', 'BSE-3B'),
+(3, 'Sara Sultan', 'Sultan Ahmed', 'Spring Session', '03315042903', 'Software Engineering (Non Engineering)', 'BSE-3B');
 
 --
 -- Indexes for dumped tables
@@ -83,13 +92,13 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
