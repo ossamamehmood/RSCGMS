@@ -1,0 +1,29 @@
+Instructions: (Run Project)
+
+
+1) Open Project in Netbeans (RegistrationManagementSystem)
+
+
+2) Install Java Connector used for SQL in Project Resources Folder
+
+
+3) Add the rs2xml file in library folder
+
+
+4) Run Xampp Control Panel and open PHPMyAdmin
+
+
+5) Create Database (RegistrationManagementSystem) and Import SQL Database File from Project Database Folder.
+
+
+6) Run and It'll execute
+
+
+                              Thank You So Much From Team Mates
+
+
+                                SP20-BSE-069 (Ossama Mehmood)
+
+                                 SP20-BSE-047 (Hamza Altaf)
+
+                                 SP20-BSE-063 (Sara Sultan)

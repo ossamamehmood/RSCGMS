@@ -138,7 +138,7 @@ public class ShowStudent extends javax.swing.JFrame {
 
         jMenu2.setText("About");
 
-        About.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
+        About.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
         About.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/about.png"))); // NOI18N
         About.setText("About");
         About.addActionListener(new java.awt.event.ActionListener() {

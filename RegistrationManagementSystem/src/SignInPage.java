@@ -150,6 +150,8 @@ public class SignInPage extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel1.getAccessibleContext().setAccessibleName("Signin");
+
         setSize(new java.awt.Dimension(459, 465));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents

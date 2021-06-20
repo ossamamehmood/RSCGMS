@@ -56,6 +56,9 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Signin"/>
+      </AccessibilityProperties>
 
       <Layout>
         <DimensionLayout dim="0">
