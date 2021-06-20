@@ -14,19 +14,19 @@ import javax.swing.JOptionPane;
  *
  * @author user
  */
-public class addStudent extends javax.swing.JFrame {
+public class AddStudent extends javax.swing.JFrame {
 
     /**
-     * Creates new form addStudent
+     * Creates new form AddStudent
      */
     Connection conn = null ;
     Statement stmt = null ;
     ResultSet rs= null ;
     
-    public addStudent() {
+    public AddStudent() {
         super("Add Student");
         initComponents();
-        conn = databaseconnection.connection();
+        conn = DatabaseConnection.connection();
     }
 
     /**
@@ -47,19 +47,22 @@ public class addStudent extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         fatherName = new javax.swing.JTextField();
-        city = new javax.swing.JTextField();
         Phone = new javax.swing.JTextField();
         stdClass = new javax.swing.JTextField();
-        blood = new javax.swing.JComboBox<>();
+        bachelor = new javax.swing.JComboBox<>();
         Submit = new javax.swing.JButton();
         Back = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        session = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Home = new javax.swing.JMenuItem();
-        Logout = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         About = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        Logout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -80,24 +83,35 @@ public class addStudent extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(0, 0, 51));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("City");
+        jLabel3.setText("Session");
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 51));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Blood");
+        jLabel4.setText("Bachelor");
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 51));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Phone");
+        jLabel5.setText("Phone Number");
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 51));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Class");
+        jLabel6.setText("Class/Section");
 
-        blood.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "AB", "A+", "B+" }));
+        stdClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stdClassActionPerformed(evt);
+            }
+        });
+
+        bachelor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Civil Engineering", "Electrical Engineering", "Mechanical Engineering", "Computer Science", "Software Engineering (Non Engineering)", "Business Administration", "Accounting and Finance" }));
+        bachelor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bachelorActionPerformed(evt);
+            }
+        });
 
         Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
         Submit.setText("Submit");
@@ -117,40 +131,43 @@ public class addStudent extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/AddStudent.png"))); // NOI18N
 
+        session.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fall Session", "Spring Session" }));
+        session.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sessionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(99, 99, 99))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addGap(43, 43, 43)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(city)
-                            .addComponent(blood, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(name)
-                            .addComponent(fatherName)
-                            .addComponent(Phone)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(108, 108, 108)
+                        .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Submit)
                                 .addGap(18, 18, 18)
                                 .addComponent(Back))
-                            .addComponent(stdClass))))
+                            .addComponent(stdClass)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bachelor, 0, 1, Short.MAX_VALUE)
+                            .addComponent(name)
+                            .addComponent(fatherName)
+                            .addComponent(Phone)
+                            .addComponent(session, 0, 1, Short.MAX_VALUE))))
                 .addGap(93, 93, 93))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -173,10 +190,10 @@ public class addStudent extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(city, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(session, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(blood, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bachelor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -193,9 +210,10 @@ public class addStudent extends javax.swing.JFrame {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("File");
+        jMenu1.setText("Home");
 
         Home.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/home.png"))); // NOI18N
         Home.setText("Home");
         Home.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,20 +222,12 @@ public class addStudent extends javax.swing.JFrame {
         });
         jMenu1.add(Home);
 
-        Logout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
-        Logout.setText("Logout");
-        Logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
-            }
-        });
-        jMenu1.add(Logout);
-
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("About");
 
-        About.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        About.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
+        About.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/about.png"))); // NOI18N
         About.setText("About");
         About.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,6 +237,34 @@ public class addStudent extends javax.swing.JFrame {
         jMenu2.add(About);
 
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Teammates");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/account.png"))); // NOI18N
+        jMenuItem1.setText("Teammates");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Sign out");
+
+        Logout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/logout.png"))); // NOI18N
+        Logout.setText("Sign out");
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
+            }
+        });
+        jMenu4.add(Logout);
+
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -245,39 +283,18 @@ public class addStudent extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        home object = new home();
-        object.setVisible(true);
-    }//GEN-LAST:event_HomeActionPerformed
-
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        login object = new login();
-        object.setVisible(true);
-    }//GEN-LAST:event_LogoutActionPerformed
-
-    private void AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        about object = new about();
-        object.setVisible(true);
-    }//GEN-LAST:event_AboutActionPerformed
-
     private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
             String StdName = name.getText();
             String StdFatherName = fatherName.getText();
-            String StdBlood = (String)  blood.getSelectedItem();
-            String StdCity = city.getText();
+            String StdSession = (String) session.getSelectedItem();
+            String StdBachelor = (String) bachelor.getSelectedItem();
             String StdPhone = Phone.getText();
-            int Class = Integer.parseInt(stdClass.getText());
+            String Class = stdClass.getText();
             
-            String sql = "Insert Student(StdName, StdFatherName, StdBlood, StdPhone, StdCity, class) Value('"+StdName+"','"+StdFatherName+"','"+StdBlood+"','"+StdCity+"','"+StdPhone+"','"+Class+"')";
+            String sql = "Insert Student(StdName, StdFatherName, StdSession, StdPhone, StdBachelor, class) Value('"+StdName+"','"+StdFatherName+"','"+StdSession+"','"+StdPhone+"','"+StdBachelor+"','"+Class+"')";
 
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null,"Data is Successfully inserted");
@@ -289,9 +306,49 @@ public class addStudent extends javax.swing.JFrame {
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        home object = new home();
+        HomePage object = new HomePage();
         object.setVisible(true);
     }//GEN-LAST:event_BackActionPerformed
+
+    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        HomePage object = new HomePage();
+        object.setVisible(true);
+    }//GEN-LAST:event_HomeActionPerformed
+
+    private void AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        AboutPage object = new AboutPage();
+        object.setVisible(true);
+    }//GEN-LAST:event_AboutActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Teammates object = new Teammates();
+        object.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        SignInPage object = new SignInPage();
+        object.setVisible(true);
+    }//GEN-LAST:event_LogoutActionPerformed
+
+    private void bachelorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bachelorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bachelorActionPerformed
+
+    private void sessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sessionActionPerformed
+
+    private void stdClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stdClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stdClassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,20 +367,21 @@ public class addStudent extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(addStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(addStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(addStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(addStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new addStudent().setVisible(true);
+                new AddStudent().setVisible(true);
             }
         });
     }
@@ -335,8 +393,7 @@ public class addStudent extends javax.swing.JFrame {
     private javax.swing.JMenuItem Logout;
     private javax.swing.JTextField Phone;
     private javax.swing.JButton Submit;
-    private javax.swing.JComboBox<String> blood;
-    private javax.swing.JTextField city;
+    private javax.swing.JComboBox<String> bachelor;
     private javax.swing.JTextField fatherName;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -347,9 +404,13 @@ public class addStudent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField name;
+    private javax.swing.JComboBox<String> session;
     private javax.swing.JTextField stdClass;
     // End of variables declaration//GEN-END:variables
 }

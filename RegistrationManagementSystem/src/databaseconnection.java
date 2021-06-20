@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
  *
  * @author user
  */
-public class databaseconnection {
+public class DatabaseConnection {
     //C:\Program Files\Java\jdk1.8.0_281\jre\lib\ext
     final static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     final static String DB_URL = "jdbc:mysql://localhost:3306/registrationmanagementsystem";
