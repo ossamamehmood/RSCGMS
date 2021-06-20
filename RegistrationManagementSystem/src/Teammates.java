@@ -14,6 +14,7 @@ public class Teammates extends javax.swing.JFrame {
      * Creates new form about
      */
     public Teammates() {
+    super("Teammates");
         initComponents();
     }
 
