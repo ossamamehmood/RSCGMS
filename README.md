@@ -8,7 +8,7 @@ This project is a part of Student Registration, Registration Process & Administr
 
 Add New Student
 
-Update / R emove Student
+Update / Remove Student
 
 Search Student
 
