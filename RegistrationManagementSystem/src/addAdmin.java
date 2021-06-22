@@ -44,8 +44,8 @@ public class AddAdmin extends javax.swing.JFrame {
         name = new javax.swing.JTextField();
         mail = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Submit = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -87,19 +87,19 @@ public class AddAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
+        Submit.setText("Submit");
+        Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SubmitActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/back.png"))); // NOI18N
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/back.png"))); // NOI18N
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -123,9 +123,9 @@ public class AddAdmin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jButton1)
+                            .addComponent(Submit)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton2))
+                            .addComponent(Back))
                         .addComponent(password)
                         .addComponent(name))
                     .addComponent(mail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -150,8 +150,8 @@ public class AddAdmin extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Submit)
+                    .addComponent(Back))
                 .addGap(36, 36, 36))
         );
 
@@ -236,14 +236,14 @@ public class AddAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
                 setVisible(false);
                 HomePage object = new HomePage();
                 object.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -258,7 +258,7 @@ public class AddAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Data is Inserted");
             
         }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SubmitActionPerformed
 
     private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
         // TODO add your handling code here:
@@ -326,10 +326,10 @@ public class AddAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem About;
+    private javax.swing.JButton Back;
     private javax.swing.JMenuItem Home;
     private javax.swing.JMenuItem Logout;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Submit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

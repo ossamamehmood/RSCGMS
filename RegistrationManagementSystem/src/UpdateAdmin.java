@@ -43,10 +43,10 @@ public class UpdateAdmin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         mail = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Update = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
+        Search = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         id = new javax.swing.JTextField();
         password = new javax.swing.JTextField();
@@ -85,35 +85,35 @@ public class UpdateAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
-        jButton1.setText("Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                UpdateActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/back.png"))); // NOI18N
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/back.png"))); // NOI18N
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/loupe.png"))); // NOI18N
-        jButton3.setText("Search");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/loupe.png"))); // NOI18N
+        Search.setText("Search");
+        Search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                SearchActionPerformed(evt);
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Cancel.png"))); // NOI18N
-        jButton4.setText("Delete");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Cancel.png"))); // NOI18N
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
@@ -139,11 +139,11 @@ public class UpdateAdmin extends javax.swing.JFrame {
                             .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mail, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(Update)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton4)
+                                .addComponent(Delete)
                                 .addGap(31, 31, 31)
-                                .addComponent(jButton2))))
+                                .addComponent(Back))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -156,7 +156,7 @@ public class UpdateAdmin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(104, 104, 104)
-                .addComponent(jButton3)
+                .addComponent(Search)
                 .addGap(60, 60, 60))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
@@ -172,7 +172,7 @@ public class UpdateAdmin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                    .addComponent(Search))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,9 +187,9 @@ public class UpdateAdmin extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1))
+                    .addComponent(Back)
+                    .addComponent(Delete)
+                    .addComponent(Update))
                 .addGap(47, 47, 47))
         );
 
@@ -270,7 +270,7 @@ public class UpdateAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mailActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -286,16 +286,16 @@ public class UpdateAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Data is Updated");
 
         }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_UpdateActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         HomePage object = new HomePage();
         object.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -316,9 +316,9 @@ public class UpdateAdmin extends javax.swing.JFrame {
             }
         
         }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SearchActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
        try{
            stmt = conn.createStatement();
@@ -332,7 +332,7 @@ public class UpdateAdmin extends javax.swing.JFrame {
                 ShowAdmin object = new ShowAdmin();
                 object.setVisible(true);
        }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_DeleteActionPerformed
 
     private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
         // TODO add your handling code here:
@@ -400,13 +400,13 @@ public class UpdateAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem About;
+    private javax.swing.JButton Back;
+    private javax.swing.JButton Delete;
     private javax.swing.JMenuItem Home;
     private javax.swing.JMenuItem Logout;
+    private javax.swing.JButton Search;
+    private javax.swing.JButton Update;
     private javax.swing.JTextField id;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

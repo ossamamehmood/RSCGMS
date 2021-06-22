@@ -49,10 +49,10 @@ public class UpdateStudent extends javax.swing.JFrame {
         fatherName = new javax.swing.JTextField();
         Phone = new javax.swing.JTextField();
         stdClass = new javax.swing.JTextField();
-        Submit = new javax.swing.JButton();
+        Update = new javax.swing.JButton();
         Back = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Search = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
         id = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -117,11 +117,11 @@ public class UpdateStudent extends javax.swing.JFrame {
             }
         });
 
-        Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
-        Submit.setText("Update");
-        Submit.addActionListener(new java.awt.event.ActionListener() {
+        Update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Login.png"))); // NOI18N
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitActionPerformed(evt);
+                UpdateActionPerformed(evt);
             }
         });
 
@@ -133,19 +133,19 @@ public class UpdateStudent extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/loupe.png"))); // NOI18N
-        jButton1.setText("Search");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/loupe.png"))); // NOI18N
+        Search.setText("Search");
+        Search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SearchActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Cancel.png"))); // NOI18N
-        jButton2.setText("Delete");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Login/Cancel.png"))); // NOI18N
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
@@ -177,13 +177,13 @@ public class UpdateStudent extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(Back)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(392, 392, 392)
-                .addComponent(jButton1)
+                .addComponent(Search)
                 .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -210,9 +210,9 @@ public class UpdateStudent extends javax.swing.JFrame {
                     .addComponent(Phone, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(Submit)
+                        .addComponent(Update)
                         .addGap(39, 39, 39)
-                        .addComponent(jButton2))
+                        .addComponent(Delete))
                     .addComponent(bachelor, 0, 1, Short.MAX_VALUE))
                 .addGap(147, 147, 147))
         );
@@ -226,7 +226,7 @@ public class UpdateStudent extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addComponent(jLabel8))
-                            .addComponent(jButton1))
+                            .addComponent(Search))
                         .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -252,8 +252,8 @@ public class UpdateStudent extends javax.swing.JFrame {
                                 .addGap(41, 41, 41)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel3)
-                                    .addComponent(Submit)
-                                    .addComponent(jButton2)
+                                    .addComponent(Update)
+                                    .addComponent(Delete)
                                     .addComponent(session, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(272, 272, 272)
@@ -369,7 +369,7 @@ public class UpdateStudent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bloodActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -382,9 +382,9 @@ public class UpdateStudent extends javax.swing.JFrame {
             object.setVisible(true);
 
         }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_DeleteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -410,7 +410,7 @@ public class UpdateStudent extends javax.swing.JFrame {
             }
 
         }catch(Exception e){JOptionPane.showMessageDialog(null,e);}
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SearchActionPerformed
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
@@ -419,7 +419,7 @@ public class UpdateStudent extends javax.swing.JFrame {
         object.setVisible(true);
     }//GEN-LAST:event_BackActionPerformed
 
-    private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
@@ -438,7 +438,7 @@ public class UpdateStudent extends javax.swing.JFrame {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
         }
-    }//GEN-LAST:event_SubmitActionPerformed
+    }//GEN-LAST:event_UpdateActionPerformed
 
     private void sessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sessionActionPerformed
         // TODO add your handling code here:
@@ -491,16 +491,16 @@ public class UpdateStudent extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem About;
     private javax.swing.JButton Back;
+    private javax.swing.JButton Delete;
     private javax.swing.JMenuItem Home;
     private javax.swing.JMenuItem Logout;
     private javax.swing.JTextField Phone;
-    private javax.swing.JButton Submit;
+    private javax.swing.JButton Search;
+    private javax.swing.JButton Update;
     private javax.swing.JComboBox<String> bachelor;
     private javax.swing.JComboBox<String> blood;
     private javax.swing.JTextField fatherName;
     private javax.swing.JTextField id;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

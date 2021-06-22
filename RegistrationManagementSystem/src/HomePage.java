@@ -31,14 +31,14 @@ public class HomePage extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        addStudent = new javax.swing.JButton();
-        Operationstudent = new javax.swing.JButton();
+        AddStudent = new javax.swing.JButton();
+        UpdateStudent = new javax.swing.JButton();
         Showstudent = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         AddAdmin = new javax.swing.JButton();
-        OperationAdmin = new javax.swing.JButton();
+        UpdateAdmin = new javax.swing.JButton();
         ShowAdmin = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -66,17 +66,17 @@ public class HomePage extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/Home Page.png"))); // NOI18N
 
-        addStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/AddStudent.png"))); // NOI18N
-        addStudent.addActionListener(new java.awt.event.ActionListener() {
+        AddStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/AddStudent.png"))); // NOI18N
+        AddStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addStudentActionPerformed(evt);
+                AddStudentActionPerformed(evt);
             }
         });
 
-        Operationstudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/UpdateStudent.png"))); // NOI18N
-        Operationstudent.addActionListener(new java.awt.event.ActionListener() {
+        UpdateStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/UpdateStudent.png"))); // NOI18N
+        UpdateStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OperationstudentActionPerformed(evt);
+                UpdateStudentActionPerformed(evt);
             }
         });
 
@@ -106,10 +106,10 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        OperationAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/UpdateAdmin.png"))); // NOI18N
-        OperationAdmin.addActionListener(new java.awt.event.ActionListener() {
+        UpdateAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProjectImages/Home Page/UpdateAdmin.png"))); // NOI18N
+        UpdateAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OperationAdminActionPerformed(evt);
+                UpdateAdminActionPerformed(evt);
             }
         });
 
@@ -156,7 +156,7 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(141, 141, 141)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(addStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -168,9 +168,9 @@ public class HomePage extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
-                    .addComponent(Operationstudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UpdateStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(OperationAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UpdateAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,11 +200,11 @@ public class HomePage extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(44, 44, 44)
-                                .addComponent(Operationstudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(UpdateStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(23, 23, 23))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(37, 37, 37)
-                                .addComponent(addStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AddStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel3)
@@ -217,7 +217,7 @@ public class HomePage extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(AddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OperationAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UpdateAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ShowAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -307,12 +307,12 @@ public class HomePage extends javax.swing.JFrame {
                 object.setVisible(true);
     }//GEN-LAST:event_ShowAdminActionPerformed
 
-    private void addStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentActionPerformed
+    private void AddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddStudentActionPerformed
         // TODO add your handling code here:
                 setVisible(false);
                 AddStudent object = new AddStudent();
                 object.setVisible(true);
-    }//GEN-LAST:event_addStudentActionPerformed
+    }//GEN-LAST:event_AddStudentActionPerformed
 
     private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
         // TODO add your handling code here:
@@ -335,12 +335,12 @@ public class HomePage extends javax.swing.JFrame {
                 object.setVisible(true);
     }//GEN-LAST:event_ShowstudentActionPerformed
 
-    private void OperationstudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OperationstudentActionPerformed
+    private void UpdateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateStudentActionPerformed
         // TODO add your handling code here:
                 setVisible(false);
                 UpdateStudent object = new UpdateStudent();
                 object.setVisible(true);
-    }//GEN-LAST:event_OperationstudentActionPerformed
+    }//GEN-LAST:event_UpdateStudentActionPerformed
 
     private void AddAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddAdminActionPerformed
         // TODO add your handling code here:
@@ -350,12 +350,12 @@ public class HomePage extends javax.swing.JFrame {
           
     }//GEN-LAST:event_AddAdminActionPerformed
 
-    private void OperationAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OperationAdminActionPerformed
+    private void UpdateAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateAdminActionPerformed
         // TODO add your handling code here:
                 setVisible(false);
                 UpdateAdmin object = new UpdateAdmin();
                 object.setVisible(true);
-    }//GEN-LAST:event_OperationAdminActionPerformed
+    }//GEN-LAST:event_UpdateAdminActionPerformed
 
     private void AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutActionPerformed
         // TODO add your handling code here:
@@ -410,13 +410,13 @@ public class HomePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem About;
     private javax.swing.JButton AddAdmin;
+    private javax.swing.JButton AddStudent;
     private javax.swing.JMenuItem Home;
     private javax.swing.JMenuItem Logout;
-    private javax.swing.JButton OperationAdmin;
-    private javax.swing.JButton Operationstudent;
     private javax.swing.JButton ShowAdmin;
     private javax.swing.JButton Showstudent;
-    private javax.swing.JButton addStudent;
+    private javax.swing.JButton UpdateAdmin;
+    private javax.swing.JButton UpdateStudent;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

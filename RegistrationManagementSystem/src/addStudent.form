@@ -173,11 +173,11 @@
                           </Group>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="bachelor" pref="0" max="32767" attributes="0"/>
+                              <Component id="bachelor" max="32767" attributes="0"/>
                               <Component id="name" alignment="0" max="32767" attributes="0"/>
                               <Component id="fatherName" alignment="0" max="32767" attributes="0"/>
                               <Component id="Phone" alignment="0" max="32767" attributes="0"/>
-                              <Component id="session" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="session" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
