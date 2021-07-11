@@ -42,9 +42,14 @@ Database Connectivity : SQL Java Connector - PHP My Admin - Xampp ControlInterfa
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Interface Design (Registration Management System).PNG">
 </p>
 
-### Login Page
-Login Page Interface :
+### Login Page Interface
 Login Page will use to access Home Page.
 <p align="left">
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
+</p>
+
+### Home Page Interface
+Home Page will use to access all functionalities.
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Welcome to Home Page.PNG">
 </p>
