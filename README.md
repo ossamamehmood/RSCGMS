@@ -39,5 +39,5 @@ Database Connectivity : SQL Java Connector - PHP My Admin - Xampp Control Panel
 
 ## Login Page
 <p align="center">
-  <img alt="" style="{max-height: 50px}" src="./Project Finalized (Interface Design)/Sign In.png">
+  <img alt="" style="{max-height: 50px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
 </p>
