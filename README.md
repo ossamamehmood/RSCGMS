@@ -38,6 +38,6 @@ Database Connectivity : SQL Java Connector - PHP My Admin - Xampp Control Panel
 # User Interface Design
 
 ## Login Page
-<p align="center">
-  <img alt="" style="{max-height: 50px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
 </p>
