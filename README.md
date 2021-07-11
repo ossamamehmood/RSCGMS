@@ -80,7 +80,7 @@ Add, Update/Delete/Search and Show Student
 
 
 
-## Admnin Interface
+## Admin Interface
 Add, Update/Delete/Search and Show Admin
 
 ### Add Admin Interface
@@ -97,6 +97,26 @@ Add, Update/Delete/Search and Show Admin
 <p align="left">
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Show Admin.PNG">
 </p>
+
+
+
+
+
+## About and Teammates Interface
+About and Teammates Page Interface
+
+### About Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/About.PNG">
+</p>
+
+### Teammates Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Teammates.PNG">
+</p>
+
+
+
 
 
 
