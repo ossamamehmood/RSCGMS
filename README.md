@@ -37,8 +37,6 @@ Database Connectivity : SQL Java Connector - PHP My Admin - Xampp ControlInterfa
 
 # User Interface Design
 
-
-
 ## Project Interface
 <p align="left">
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Interface Design (Registration Management System).PNG">
@@ -115,7 +113,7 @@ About and Teammates Page Interface
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Teammates.PNG">
 </p>
 
-
+# Project Statistics
 
 ##### The `Project` is `Successfully completed` 
 
