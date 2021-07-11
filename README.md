@@ -37,9 +37,17 @@ Database Connectivity : SQL Java Connector - PHP My Admin - Xampp ControlInterfa
 
 # User Interface Design
 
-### Project Interface
+
+
+## Project Interface
 <p align="left">
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Interface Design (Registration Management System).PNG">
+</p>
+
+### Home Page Interface
+Home Page will use to access all functionalities.
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Welcome to Home Page.PNG">
 </p>
 
 ### Login Page Interface
@@ -48,8 +56,48 @@ Login Page will use to access Home Page.
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
 </p>
 
-### Home Page Interface
-Home Page will use to access all functionalities.
+
+
+
+## Student Interface
+Add, Update/Delete/Search and Show Student
+
+### Add Student Interface
 <p align="left">
-  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Welcome to Home Page.PNG">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Add Student.PNG">
 </p>
+
+### Update Student Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Update Student.PNG">
+</p>
+
+### Show Student Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Show Student.PNG">
+</p>
+
+
+
+
+## Admnin Interface
+Add, Update/Delete/Search and Show Admin
+
+### Add Admin Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Add Admin.PNG">
+</p>
+
+### Update Admin Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Update Admin.PNG">
+</p>
+
+### Show Admin Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Show Admin.PNG">
+</p>
+
+
+
+
