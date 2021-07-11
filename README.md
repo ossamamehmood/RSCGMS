@@ -32,12 +32,17 @@ JAVA - Object Orientated Programming
 
 Interface Design - Java Frame Form (J-Frame)
 
-Database Connectivity : SQL Java Connector - PHP My Admin - Xampp Control Panel
+Database Connectivity : SQL Java Connector - PHP My Admin - Xampp ControlInterface Design (Registration Management System).PNG Panel
 
 
 # User Interface Design
 
-## Login Page
+### Project Interface
+<p align="left">
+  <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Interface Design (Registration Management System).PNG">
+</p>
+
+### Login Page
 <p align="left">
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Sign In.PNG">
 </p>
