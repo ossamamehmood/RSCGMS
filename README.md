@@ -119,7 +119,9 @@ About and Teammates Page Interface
 
 ##### The `Project` is `Successfully completed` 
 
-##### - `Right` Are Reserved `©`2021 `ossamamehmood®` Registration and `Student` Card `Generation` Management `System`.
+##### `Right` Are Reserved `©`2021 `ossamamehmood®` 
+
+##### Registration and `Student` Card `Generation` Management `System`
 
 
 
