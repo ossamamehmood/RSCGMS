@@ -96,7 +96,15 @@ Add, Update/Delete/Search and Show Admin
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Show Admin.PNG">
 </p>
 
+## Functionality (Coming Versions)
 
+- Newer Environment 
+- - Desktop Application 
+- - Android Application
+
+- Functionalities
+- - Sign Up Functionality
+- - Forget Password
 
 
 
