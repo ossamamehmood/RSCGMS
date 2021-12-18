@@ -2,7 +2,7 @@
 
 This project is a part of Student Registration, Registration Process & Administrator with some great functionality where the following modules are performed (Semester Project). 
 
-# Project Functionalities :
+# Project Functionalities For Student / Admin :
 
 # Student Functionalities :
 
@@ -114,6 +114,7 @@ About and Teammates Page Interface
 
 
 
+
 # Functionality (Coming Versions)
 
 - Newer Environment 
@@ -137,3 +138,7 @@ About and Teammates Page Interface
 
 
 
+
+## Support 💓
+
+Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
