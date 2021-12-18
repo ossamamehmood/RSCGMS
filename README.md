@@ -112,15 +112,19 @@ About and Teammates Page Interface
   <img alt="" style="{max-height: 20px}" src="./Project Finalized (Interface Design)/Teammates.PNG">
 </p>
 
+
+
 # Functionality (Coming Versions)
 
 - Newer Environment 
- - Desktop Application 
- - Android Application
+  - `Desktop` Application
+  - `Android` Application
 
 - Functionalities
- - Sign Up Functionality
- - Forget Password
+  - `Sign Up` Functionality
+  - `Forget Password`Functionality
+
+
 
 
 # Project Statistics
