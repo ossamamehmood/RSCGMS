@@ -122,6 +122,8 @@ About and Teammates Page Interface
   - `Android` Application
 
 - Functionalities
+  - `Student Card Generate` Functionality
+  - `Online Fee Process and Payment` Functionality
   - `Sign Up` Functionality
   - `Forget Password`Functionality
 
