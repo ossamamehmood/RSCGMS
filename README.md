@@ -1,4 +1,4 @@
-# Registration and Student Card Generation Management System (RSCMS)
+# Registration and Student Card Generation Management System (RSCGMS)
 
 This project is a part of Student Registration, Registration Process & Administrator with some great functionality where the following modules are performed (Semester Project). 
 
